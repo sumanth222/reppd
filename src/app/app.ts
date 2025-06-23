@@ -30,4 +30,12 @@ export class App {
   navigateToServices(){
     this.router.navigate(['services'])
   }
+
+  navigateToHome(){
+    this.router.navigate(['home'])
+  }
+
+  navigateToContact(){
+    this.router.navigate(['contact'])
+  }
 }

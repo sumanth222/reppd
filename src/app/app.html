@@ -8,7 +8,7 @@
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a routerLink="/" class="hover:text-green-400 transition">Home</a>
+      <a routerLink="/" class="hover:text-green-400 transition" (click)="navigateToHome()">Home</a>
       <a routerLink="/about" class="hover:text-green-400 transition" (click)="navigateToAbout()">About</a>
       <a routerLink="/contact" class="hover:text-green-400 transition">Contact</a>
     </nav>
@@ -24,10 +24,10 @@
 
   <!-- Mobile Dropdown -->
   <div *ngIf="mobileMenuOpen" class="md:hidden mt-4 space-y-4 px-4">
-    <a routerLink="/" (click)="closeMobileMenu()" class="block text-sm hover:text-green-400">Home</a>
+    <a routerLink="/home" (click)="navigateToHome(); closeMobileMenu();" class="block text-sm hover:text-green-400">Home</a>
     <a routerLink="/about" (click)="navigateToAbout(); closeMobileMenu();" class="block text-sm hover:text-green-400">About</a>
-    <a routerLink="/services" class="block text-sm hover:text-green-400" (click)="navigateToServices(); closeMobileMenu();">Services</a>
-    <a routerLink="/contact" (click)="closeMobileMenu()" class="block text-sm hover:text-green-400">Contact</a>
+    <a routerLink="/services" (click)="navigateToServices(); closeMobileMenu();" class="block text-sm hover:text-green-400">Services</a>
+    <a routerLink="/contact" (click)="navigateToContact(); closeMobileMenu()" class="block text-sm hover:text-green-400">Contact</a>
   </div>
 </header>
 
