@@ -15,4 +15,7 @@ export class Home {
     this.router.navigate(['book'])
   }
 
+  navToRequestPDF(){
+    this.router.navigate(['requestPDF']);
+  }
 }

@@ -4,6 +4,7 @@ import { Home } from './pages/home/home';
 import { Services } from './pages/services/services';
 import { Contact } from './pages/contact/contact';
 import { BookNow } from './pages/book-now/book-now';
+import { RequestPdf } from './request-pdf/request-pdf';
 
 
 export const routes: Routes = [
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'about', component: About },
   { path: 'services', component: Services },
   { path: 'contact', component: Contact },
-  { path: 'book', component: BookNow }
+  { path: 'book', component: BookNow },
+  { path: 'requestPDF', component: RequestPdf}
 ];
 

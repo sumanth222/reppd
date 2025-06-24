@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class Services {
 
+  constructor(private router: Router){}
+
+  navToRequestPDF(){
+    this.router.navigate(['requestPDF']);
+  }
 }
