@@ -1,8 +1,9 @@
 <section class="min-h-screen bg-gray-950 text-white px-6 py-20 flex items-center justify-center">
   <div class="w-full max-w-xl bg-gray-900 p-8 rounded-2xl shadow-xl">
     <h2 class="text-3xl font-bold text-green-400 text-center mb-8">Pre-Book Your Session</h2>
-    <h4>We are launching Mid July and you can pre-book your session right now for no cost!</h4>
-    <h4>Let us know what you are looking for and we'll get back to you as soon as we can!</h4>
+    <h4 style="text-align: center;">We are launching Mid July and you can pre-book your session right now for no cost!</h4>
+    <br/>
+    <h4 style="text-align: center;">You can pay the session cost of ₹299/- after your session is done!</h4>
     <br />
 
     <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="space-y-6">
@@ -89,7 +90,7 @@
         [disabled]="bookingForm.invalid"
         class="w-full bg-green-500 hover:bg-green-600 text-black font-semibold py-3 rounded-xl transition duration-300 disabled:opacity-50"
       >
-        Book Now for ₹0
+        Pre-Book Now for ₹0
       </button>
     </form>
   </div>
