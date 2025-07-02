@@ -28,6 +28,23 @@ export class BookNow {
     });
   }
 
+  ngOnInit(): void {
+    this.logPageVisit();
+  }
+
+  async logPageVisit() {
+    try {
+      const auditRef = collection(this.firestore, 'pageVisits');
+      await addDoc(auditRef, {
+        page: 'BookNow',
+        timestamp: new Date(),
+        referrer: document.referrer || 'Direct',
+      });
+    } catch (error) {
+      console.error('Audit log failed:', error);
+    }
+  }
+
   async onSubmit() {
     if (this.bookingForm.invalid) return;
 
